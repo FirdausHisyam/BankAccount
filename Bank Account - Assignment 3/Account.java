@@ -1,15 +1,15 @@
 public class Account{
-    protected static double balance = 0;
+    protected  double balance = 0;
 
     public Account(double init_balance){
         this.balance = init_balance;
     }
 
-    public static double getBalance(){
+    public double getBalance(){
         return balance;
     }
 
-    public static boolean deposit(double amt){
+    public boolean deposit(double amt){
         
         if(amt > 0){
             balance += amt;

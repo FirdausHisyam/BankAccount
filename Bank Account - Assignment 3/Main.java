@@ -5,7 +5,7 @@ public class Main {
     public static void main (String[] args){
 
         Scanner sc = new Scanner(System.in);
-
+        Account account = new Account(100);
         do{
             System.out.println("Bank Account");
             System.out.println("1. Saving Account");
@@ -17,10 +17,10 @@ public class Main {
             switch(choice)
             {
                 case 1:
-                     Savingoption();
-                     break;
+                    SavingOption(account);
+                    break;
                 case 2: 
-                    Checkingoption();
+                    CheckingOption(account);
                     break;
                 case 3: 
                         System.out.println("Bye Bye");
@@ -30,7 +30,7 @@ public class Main {
         }while(true);
     }
 
-    public static void Savingoption(){
+    public static void SavingOption(Account account){
 
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -48,16 +48,16 @@ public class Main {
             {
                 case 1: 
                     System.out.println("Amount to deposit: ");
-                    double depoamt = sc.nextDouble();
-                    Account.deposit(depoamt);
+                    double depoAmt = sc.nextDouble();
+                    account.deposit(depoAmt);
                     break;
                 case 2: 
-                    System.out.println("Balance: RM" + Account.getBalance() );
+                    System.out.println("Balance: RM" + account.getBalance() );
                     break;
                 case 3: 
                     System.out.println("Amount to withdraw: ");
-                    double withdrawamt = sc.nextDouble();
-                    Account.withdraw(withdrawamt);
+                    double withdrawAmt = sc.nextDouble();
+                    account.withdraw(withdrawAmt);
                     break;
                 case 4: System.out.println("Returning to main menu.");
                         return;
@@ -66,7 +66,7 @@ public class Main {
         }while(true);
     }
 
-    public static void Checkingoption(){
+    public static void CheckingOption(Account account){
 
         Scanner sc = new Scanner(System.in);
 
@@ -86,16 +86,16 @@ public class Main {
             {
                 case 1: 
                     System.out.println("Amount to deposit: ");
-                    double depoamt = sc.nextDouble();
-                    Account.deposit(depoamt);
+                    double depoAmt = sc.nextDouble();
+                    account.deposit(depoAmt);
                     break;
                 case 2: 
-                    System.out.println("Balance: RM" + Account.getBalance() );
+                    System.out.println("Balance: RM" + account.getBalance() );
                     break;
                 case 3: 
                     System.out.println("Amount to withdraw: ");
-                    double withdrawamt = sc.nextDouble();
-                    Account.withdraw(withdrawamt);
+                    double withdrawAmt = sc.nextDouble();
+                    account.withdraw(withdrawAmt);
                     break;
                 case 4:
                     System.out.println("Returning to main menu.");
