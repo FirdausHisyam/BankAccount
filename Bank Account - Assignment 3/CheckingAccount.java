@@ -10,7 +10,7 @@ public class CheckingAccount extends Account{
 
     @Override
     public  boolean withdraw(double amt){
-        if (amt > 0 && amt <= getBalance()){
+        if (amt > 0 && amt <= getBalance() && getBalance() > insufficientFee){
             double totalWithdraw = amt + insufficientFee;
             return super.withdraw(totalWithdraw);
         }

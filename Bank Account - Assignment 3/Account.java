@@ -1,4 +1,4 @@
-public class Account{
+public abstract class Account{
     protected  double balance = 0;
 
     public Account(double init_balance){
