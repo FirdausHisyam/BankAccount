@@ -5,7 +5,8 @@ public class Main {
     public static void main (String[] args){
 
         Scanner sc = new Scanner(System.in);
-        Account account = new Account(100);
+        Account savingAccount = new SavingAccount(100,0.25);
+        Account checkingAccount = new CheckingAccount(11,10);
         do{
             System.out.println("Bank Account");
             System.out.println("1. Saving Account");
@@ -17,10 +18,10 @@ public class Main {
             switch(choice)
             {
                 case 1:
-                    SavingOption(account);
+                    SavingOption(savingAccount);
                     break;
                 case 2: 
-                    CheckingOption(account);
+                    CheckingOption(checkingAccount);
                     break;
                 case 3: 
                         System.out.println("Bye Bye");
