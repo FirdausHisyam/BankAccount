@@ -18,21 +18,15 @@ public class SavingAccount extends Account {
     public boolean withdraw(double amount){
 
        if(amount > 0 && amount <= getBalance()){
-        double totalWithdraw = amount + amount * (annualInterest/12/100);
-        return super.withdraw(totalWithdraw);
+        return super.withdraw(amount);
        }
        return false;
     }
 
-    public boolean withdraw(double amount, boolean includeInterest){
-
-        if(includeInterest){
-            return super.withdraw(amount);
-        }
-        else{
-            return withdraw(amount);
-        }
-    }
+    @Override
+   public double getBalance(){
+        return super.getBalance() * (1 + annualInterest/12/100);
+   }
 
 
     /*public static void DepoMethod(){

@@ -5,8 +5,8 @@ public class Main {
     public static void main (String[] args){
 
         Scanner sc = new Scanner(System.in);
-        Account savingAccount = new SavingAccount(100,0.25);
-        Account checkingAccount = new CheckingAccount(11,10);
+        Account savingAccount = new SavingAccount(0,0.25);
+        Account checkingAccount = new CheckingAccount(0,10);
         do{
             System.out.println("Bank Account");
             System.out.println("1. Saving Account");
